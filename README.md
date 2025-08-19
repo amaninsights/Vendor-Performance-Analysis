@@ -71,7 +71,7 @@ Vendor Performance Analysis Project/
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/Sarohaa199/Vendor-Performance-Analysis.git
    cd "Vendor Performance Analysis Project"
    ```
 
