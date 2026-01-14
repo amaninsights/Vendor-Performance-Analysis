@@ -1,0 +1,45 @@
+﻿# Vendor Performance Analytics
+
+## Project Configuration
+project:
+  name: "Vendor Performance Analytics"
+  version: "2.0.0"
+  author: "Aman Saroha"
+  description: "End-to-end retail analytics pipeline for vendor performance evaluation"
+
+## Database Configuration
+database:
+  type: "sqlite"
+  path: "data/processed/inventory.db"
+  
+## Data Sources
+data:
+  raw_dir: "data/raw"
+  processed_dir: "data/processed"
+  files:
+    - purchases.csv
+    - sales.csv
+    - begin_inventory.csv
+    - end_inventory.csv
+    - purchase_prices.csv
+    - vendor_invoice.csv
+
+## Analysis Parameters  
+analysis:
+  min_profit_margin: 0
+  min_sales_quantity: 0
+  outlier_std_threshold: 3
+  top_vendors_count: 10
+  
+## Visualization Settings
+visualization:
+  style: "seaborn-v0_8-whitegrid"
+  figure_dpi: 300
+  color_palette: "husl"
+  export_format: "png"
+
+## Logging
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "logs/pipeline.log"
